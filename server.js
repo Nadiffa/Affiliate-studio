@@ -75,5 +75,5 @@ app.post('/api/voice', async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/{*splat}', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.listen(PORT, () => console.log(`Affiliate Studio running on port ${PORT}`));
